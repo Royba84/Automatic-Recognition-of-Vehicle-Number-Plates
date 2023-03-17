@@ -73,43 +73,57 @@ Step 3: Processing
 Step 3.1
  First, the image dimensions changed to 300x500, afterwards the image is converted to grayscale as shown below:
 
-image.png
+![image](https://user-images.githubusercontent.com/105777016/225882960-0dd1e39e-3252-430c-8210-2d544375ec9e.png)
+before:
+![image](https://user-images.githubusercontent.com/105777016/225882980-368de4b9-b212-4ffc-9ffa-d4c6ca323a5c.png)
+after:
+![image](https://user-images.githubusercontent.com/105777016/225883020-b0b932a1-cddc-4bee-a7f0-7d362e2974eb.png)
 
-image.png
 
-image.png
 Step 3.2:
 Now, let us find the threshold level using ‘graythresh’ function, the threshold level varies between [0,1]. After that, let us use the threshold level we’ve just found in order the transform our image to BW and then inverse it using ‘~’.
 
-image.png
+![image](https://user-images.githubusercontent.com/105777016/225883070-fdf7124f-5ee1-4a66-9dc7-1ed154387850.png)
 
-image.png
+before:
+![image](https://user-images.githubusercontent.com/105777016/225883106-c76bbb42-f608-49b0-937e-37843319ae92.png)
 
-image.png
+after:
+![image](https://user-images.githubusercontent.com/105777016/225883147-962a4139-f81f-495f-bd45-454a6e9bde91.png)
+
 Step 3.3
 
 
-image.png
+![image](https://user-images.githubusercontent.com/105777016/225883189-80139249-095e-4c8e-89fd-0b9aea83dadc.png)
 
-image.png
+before (image a):
+![image](https://user-images.githubusercontent.com/105777016/225883227-a1ed888b-a5d4-4c90-904a-1dd67d1e89ec.png)
 
-image.png
+if statement (image b):
+![image](https://user-images.githubusercontent.com/105777016/225883276-5ab96d11-531d-463e-a31c-255fc8979f4e.png)
 
-image.png
+image a minus image b:
+![image](https://user-images.githubusercontent.com/105777016/225883332-b0406923-2975-434f-8261-13757b0faa32.png)
+
 
 Step 3.4
 
-image.png
+![image](https://user-images.githubusercontent.com/105777016/225883354-e2d9be88-7b73-4bc0-a2e7-13379aa2ca5a.png)
 
-image.png
+![image](https://user-images.githubusercontent.com/105777016/225883378-4e2ba951-58e2-4702-b8e6-7bfcbf7aec76.png)
+
+
 First, I cleaned all the noises from the image. After that, I used the function ‘bwlabel’, which gives in return two parameters:
 L (Label matrix) – A matrix in which each white area will be presented by separated unit with unique characteristic index. Meaning, The pixels labeled 0 are the background. The pixels labeled 1 make up one object; the pixels labeled 2 make up a second object; and so on.
 Ne – represents the number of connected objects (numbers/characters).
 Then, I used the function ‘regionprops’ which gives in return a vector of ‘boundingboxes’ in the following configuration: [left top horizontal vertical] for each boundingbox.
 Last, I drew using ‘rectangle’ function (in green) the boundingboxes on the spots I found.
+
 Step 3.5
 
-image.png
+![image](https://user-images.githubusercontent.com/105777016/225883428-36220492-dbe2-4bff-a186-8be7bde4ef4a.png)
+
+
 Final_output=[] is the vector that eventually hold the final result.
 We’ll iterate inside the loop from 1 to the number of connected objects (Ne) which we’ve calculated in the last step.
 Take each pixel that is included inside the boundingbox only and change it’s size to the size of the template we’ve created in the beginning of the algorithm.
@@ -118,31 +132,38 @@ Note: variable ‘x’ which we’ve made is a vector and he will store the corr
 
 Step 4:
  
-image.png
+![image](https://user-images.githubusercontent.com/105777016/225883453-392c9dc2-3b04-4dd8-a58d-568ddd9d9a9c.png)
+
+
 In the loop we’ll check all of our pre-made templates and look for in each iteration what is the correlation between the current boundingbox to the templates.
 I decided that detection of a character/number will be from correlation of at least 0.45.
 The detected character will be the one with the highest correlation level to a certain pre-made template.
 We’ll store the detected character in the variable ‘Final_output’.
 For example, if I would like to detect the number ‘0’:
 
-image.png
+![image](https://user-images.githubusercontent.com/105777016/225883501-4d377c18-0388-45dc-8363-e46002071970.png)
 
-image.png
+![image](https://user-images.githubusercontent.com/105777016/225883527-57a4b3c8-abfa-43ac-8653-ce525b5c761a.png)
+
+
 The character will be identified as ‘0’ because 0.96>0.88
+
 Step 5 & 6: saving the results and exporting it to .txt
  
-image.png
+![image](https://user-images.githubusercontent.com/105777016/225883615-314ef090-6f0b-43db-92c3-16cdcd8fa30d.png)
 
 
-image.png
+original image:
+![image](https://user-images.githubusercontent.com/105777016/225883638-d542c7bc-ffa2-40b3-8990-cd8fbc3460f1.png)
 
-image.png
+Detected License plate:
+![image](https://user-images.githubusercontent.com/105777016/225883693-e2ea5809-8662-4323-8f04-2d793087dc57.png)
+
 
 Some successful results
  
-image.png
+![image](https://user-images.githubusercontent.com/105777016/225883749-71663d28-5022-452f-837c-8844f69a39d7.png)
 
-image.png
 
 Less Successful results
  
