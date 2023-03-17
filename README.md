@@ -6,20 +6,25 @@ Additional cases in which it may be necessary to identify license plates:
 •Amount of vehicles that are on road (to regulate loads)
 •Monitoring of public servants and so on.
 
-image.png
+![image](https://user-images.githubusercontent.com/105777016/225882368-4a6d3785-5147-40ac-bd50-3d69344ff9bd.png)
+
+
 The Challenge:
 As mentioned, we are interested in identifying vehicle license plates. In different parts of the world, there are different standards of license plates: the size of the plate, the size and font type of the characters, the type of characters (letters and numbers, only letters/only numbers) as shown in the examples below:
 
-image.png
+![image](https://user-images.githubusercontent.com/105777016/225882395-865ee07b-671e-4dea-b015-029f124b19bc.png)
 
 DoD:
  • Implement an algorithm that identifies vehicle license numbers from color and grayscale images.
 • Show successful performance of the algorithm on at least 7 images.
 • Show partially working/failed performance of the algorithm on at least 7 images.
 • explain the results obtained and draw conclusions.
+
 Solution Method:
 
-image.png
+![image](https://user-images.githubusercontent.com/105777016/225882452-fb42a08d-7b25-45ed-beef-9534264c8d93.png)
+
+
 Preliminary requirements to implement the algorithm:
 • A computer (PC/Mac) with MATLAB software installed.
 • Image Processing Toolbox.
@@ -27,38 +32,43 @@ Preliminary requirements to implement the algorithm:
 Step 1: Characters and numbers template creation
  1.First, find a license plate (2 or more are suggested) from the same kind, for example:
 
-image.png
+![image](https://user-images.githubusercontent.com/105777016/225882478-daa5f7d9-cdd0-42ed-83c2-40afea8cebf5.png)
 
-
-image.png
+![image](https://user-images.githubusercontent.com/105777016/225882500-bf13adbe-b88a-43bd-8b50-426ac72b66b2.png)
 
 2.Extract from each license plate each letter/character in separate.
 3.Save the extracted images into dedicated folder, make sure the dimensions are unified and the format of the images is .BMP.
 4.Perform the following processing:
+
 Original - bmp 
-image.png
+![image](https://user-images.githubusercontent.com/105777016/225882643-90db13b5-d515-4214-bfe9-d76533b98a89.png)
+
+
 Im2gray
+![image](https://user-images.githubusercontent.com/105777016/225882660-61cb7858-1776-4849-af80-be9bdfe09167.png)
 
-image.png
 Imbinarize (before ~)
+![image](https://user-images.githubusercontent.com/105777016/225882689-5b57d4fb-24e9-402d-9435-f2402b694c8a.png)
 
-image.png
+
 ~Imbinarize
 
-image.png
+![image](https://user-images.githubusercontent.com/105777016/225882712-d1be59b8-08ab-4a39-9c3c-0060db4d149f.png)
 
 5.Save the template (“temp”): 
 
-image.png
+![image](https://user-images.githubusercontent.com/105777016/225882741-e5133aba-a5dd-4a80-a842-34dae71ec58c.png)
 
 So far, we made it this far:
+![image](https://user-images.githubusercontent.com/105777016/225882761-85b66ba9-8302-418f-a699-5e1a142e743d.png)
 
-image.png
+
 Step 2: User choose an image
 
-image.png
+![image](https://user-images.githubusercontent.com/105777016/225882779-b97fb25a-0bcb-4cde-b795-76cdce4692c7.png)
+![image](https://user-images.githubusercontent.com/105777016/225882810-41d973e2-ab1e-41d6-b5fc-46a92307e2a9.png)
 
-image.png
+
 Step 3: Processing
 Step 3.1
  First, the image dimensions changed to 300x500, afterwards the image is converted to grayscale as shown below:
