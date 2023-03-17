@@ -1,4 +1,5 @@
-Automatic Recognition of Vehicle Number Plates
+#Automatic Recognition of Vehicle Number Plates
+
 Background:
  In many places today, we are required to recognize license plates of various vehicles for a variety of reasons.
 For example, automatic recognition of license plates in parking lots may help in a variety of ways. For example, instead of placing a guard at the entrance to the parking lot, it is possible to place cameras at the entrance and exit, so that the cameras will scan the vehicle number in order to automatically calculate the parking time to be paid.
