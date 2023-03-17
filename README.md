@@ -164,12 +164,16 @@ Some successful results
  
 ![image](https://user-images.githubusercontent.com/105777016/225883749-71663d28-5022-452f-837c-8844f69a39d7.png)
 
+![image](https://user-images.githubusercontent.com/105777016/225883865-7afe65c8-0cae-45b6-91f1-36197aa49d5a.png)
+
 
 Less Successful results
  
-image.png
+![image](https://user-images.githubusercontent.com/105777016/225883894-a7782b76-1446-47c1-846c-7c242d034752.png)
 
-image.png
+![image](https://user-images.githubusercontent.com/105777016/225883923-d0c06bf0-6330-48b2-8fa0-402f9a2b50d6.png)
+
+
 Discussion and conclusions
  When did the algorithm perform well?
 •When the license plate was spreaded all across the image.
@@ -184,7 +188,7 @@ How this algorithm can be improved?
  •Creating larger pre-made templates with variety of fonts.
 •In cases which the license plate took small part from the whole image, an algorithm of image isolation can be used, and only after that to perform the recognition algorithm - as shown below:
 
-image.png
+![image](https://user-images.githubusercontent.com/105777016/225883956-416b3455-f17d-4f8f-a833-c8ab81c39767.png)
+
 •And lastly, making more tough noise filtering.
 
-Full algorithm and images can be found in my Github account - royba84
